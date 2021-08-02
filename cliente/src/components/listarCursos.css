@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.TitleCursos{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    padding: 10px;
+}
+
+.caja{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.carta{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+}
+.caja .carta .titulo {
+    display: flex;
+    justify-content: center;
+    color: crimson;
+}
