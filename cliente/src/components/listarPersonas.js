@@ -37,6 +37,10 @@ export default class listarPersonas extends React.Component {
                                     <td> {datos.nombre}</td>
                                     <td>{datos.apellido}</td>
                                     <td>{datos.edad}</td>
+                                    <form method="DELETE"> 
+                                        <button type="submit" class="btn btn-danger btn-block btn-sm " >Delete</button>
+
+                                    </form>
                                 </tr>
                             </tbody>
                         )

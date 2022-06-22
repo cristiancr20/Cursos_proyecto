@@ -29,7 +29,8 @@ control.crear=async(req,res)=>{
 }
 
 
-control.eliminar=(req, res)=>{
+control.eliminar= async (req, res)=>{
+
     res.send("Metodo Delete")
 }
 

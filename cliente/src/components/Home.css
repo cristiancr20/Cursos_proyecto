@@ -1,0 +1,59 @@
+
+:root{
+    --color-letras-blanco:#fff;
+    --color-letras-negro: #000;
+    --color-botones: #fff;
+    --color-fondo: #1d0b47;
+
+}
+
+.Home-information{
+    position: absolute;
+    width: 70%;
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    place-items: center;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50% );
+    
+}
+
+.botones{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botones button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+.botones .iniciosesion{
+    background: green;
+    transition: all .3s ease;
+}
+
+.botones .registro{
+    background: crimson;
+    transition: all .3s ease;
+}
+
+.botones button:hover{
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 960px){
+    .Home-information{
+        display: block;
+        text-align: center;
+        margin: 20px;
+    }
+}

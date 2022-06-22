@@ -6,7 +6,6 @@ control.leer=async(req,res)=>{
     await persona.find().then(persona =>{
         res.json(persona)
     });
-
 }
 
 control.actualizar=(req, res)=>{
@@ -14,13 +13,11 @@ control.actualizar=(req, res)=>{
 }
 
 control.crear=async(req,res)=>{
-    const {id,cedula,nombre,apellido,edad}=req.body
+    const {id,email, password}=req.body
     const nuevoRegistro = new persona({
         id,
-        cedula,
-        nombre,
-        apellido,
-        edad,
+        email, 
+        password 
     })
     await nuevoRegistro.save()
     res.json({
@@ -30,6 +27,7 @@ control.crear=async(req,res)=>{
 
 
 control.eliminar=(req, res)=>{
+    
     res.send("Metodo Delete")
 }
 

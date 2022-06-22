@@ -2,7 +2,7 @@ const mongoose = require ('mongoose')
 URI=('mongodb://localhost/bd_curso')
 
 mongoose.connect(URI,{
-    useNewUrlPerser:true,
+    useNewUrlParser:true,
     useUnifiedTopology:true,
     useCreateIndex:true,
     useFindAndModify:false

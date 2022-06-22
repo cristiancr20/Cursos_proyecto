@@ -27,7 +27,7 @@ export default class listarCursos extends React.Component {
                         return (
                                 <div className="carta">
                                     <div className="titulo">
-                                        <img></img>
+                                        
                                         <h3>{datos.nombre}</h3>
                                     </div>
                                     <div className="carta-content">
