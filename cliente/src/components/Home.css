@@ -1,15 +1,21 @@
 
 :root{
-    --color-letras-blanco:#fff;
-    --color-letras-negro: #000;
-    --color-botones: #fff;
-    --color-fondo: #1d0b47;
+    --color-uno: #FA4753;
+    --color-dos: #17181C;
+    --color-tres: #fff;
+    --color-cuatro:  #243B67;
+    --color-cinco:  #0b1b3a;
+}
 
+.Home{
+    background: var(--color-tres);
+    padding: 20px;
+    height: 100vh;
 }
 
 .Home-information{
     position: absolute;
-    width: 70%;
+    width: 90%;
     margin:auto;
     display:flex;
     justify-content: space-between;
@@ -17,9 +23,21 @@
     top:50%;
     left: 50%;
     transform: translate(-50%, -50% );
-    
 }
 
+.Home-logo{
+    width: 50%;
+}
+
+.Home-logo img{
+    width: 100%;
+    background: var(--color-tres);
+}
+
+h1{
+    text-align: center;
+    color: var(--color-cuatro);
+}
 .botones{
     margin: 20px;
     display: flex;
@@ -37,12 +55,12 @@
 }
 
 .botones .iniciosesion{
-    background: green;
+    background: var(--color-dos);
     transition: all .3s ease;
 }
 
-.botones .registro{
-    background: crimson;
+.botones .registrar{
+    background: var(--color-uno);
     transition: all .3s ease;
 }
 

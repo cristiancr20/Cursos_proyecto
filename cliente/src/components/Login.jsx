@@ -1,16 +1,18 @@
 /* eslint-disable no-undef */
 import React from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './registrarPersona.css';
+import img_sesion from '../Images/sigin.svg'
 
 
-
-class  Login extends React.Component  {
+class Login extends React.Component {
 
   state = {
     personas: []
   }
 
-  componentDidMount(){
+  componentDidMount() {
     axios.get('http://localhost:4000/Personas/')
       .then(res => {
         const personas = res.data;
@@ -19,7 +21,7 @@ class  Login extends React.Component  {
 
   }
 
-  log(){
+  /* log(){
     this.setState.personas.map(datos =>{
       let correo=datos.email
       let contraseña=datos.password
@@ -29,33 +31,45 @@ class  Login extends React.Component  {
         alert("Error: " + contraseña);
       }
     })
-  }
+  } */
 
-  
 
-    render(){
+
+  render() {
 
 
     return (
       <>
-        <div className="caja">
-          <form onsubmit={log}>
-            <div>
-              <input type="email" placeholder="Email" required onChange={
-                e => setEmail(e.target.value)
-              } />
-            </div>
-            <div>
-              <input type="password" placeholder="Password" required onChange={
-                e => setPassword(e.target.value)
-              } />
+        <body className="body-persona">
+          <h3>Se parte de nosotros!</h3>
+
+          <div className="login">
+            <div className="img">
+              <img src={img_sesion} alt="Foto Inicio Sesion" />
             </div>
 
-            <div className="boton">
-              <button type="submit"> Iniciar Sesion </button>
-            </div>
-          </form>
-        </div>
+            <form >
+              <div className="form-caja">
+              <h1>Sign In</h1>
+                <div>
+                  <input type="email" placeholder="Email" required onChange={
+                    e => setEmail(e.target.value)
+                  } />
+                </div>
+                <div>
+                  <input type="password" placeholder="Password" required onChange={
+                    e => setPassword(e.target.value)
+                  } />
+                </div>
+
+                <div className="boton">
+                  <button type="submit"> Iniciar Sesión </button>
+                </div>
+                <Link to="/registrar" className='registro'><p>Registrate y aprende con nosotros </p> </Link>
+              </div>
+            </form>
+          </div>
+        </body>
       </>
     )
   }

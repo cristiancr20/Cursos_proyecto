@@ -1,0 +1,110 @@
+:root{
+  --color-uno: #FA4753;
+  --color-dos: #17181C;
+  --color-tres: #fff;
+  --color-cuatro:  #243B67;
+  --color-cinco:  #0b1b3a;
+}
+
+.body-persona{
+  height: 100vh;
+}
+
+
+h3{
+  text-align: center;
+  color: var(--color-cuatro);
+  padding: 20px;
+  font-weight: bold;
+}
+
+
+.login, .registroPersonas{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.img img{
+  width: 100%;
+  height: 100%;
+}
+
+.img_registro{
+  width: 80%;
+}
+
+.img_registro img{
+  width: 100%;
+}
+
+form{
+  margin: auto;
+  width: 80%;
+  background: var(--color-cinco);
+  padding: 10px;
+  border-radius: 20px;
+  height: 80%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+form .form-caja{
+  margin: 10px 80px;
+}
+form .form-caja div input{
+  margin: 20px;
+  width: 350px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+}
+
+form .form-caja h1{
+  color: var(--color-tres);
+  font-weight: bold;
+}
+
+.boton{
+  display: flex;
+  justify-content: center;
+}
+
+.boton button{
+  padding: 10px;
+  width: 50%;
+  margin: auto;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: all .3s ease;
+  font-weight: bold;
+}
+
+.boton button:hover{
+  width: 60%;
+  margin: auto;
+  background: var(--color-uno);
+  color: var(--color-tres);
+}
+
+.registro{
+  color: var(--color-tres);
+  text-decoration: none;
+  list-style: none;
+  transition: all .3s ease;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.registro:hover{
+  color: var(--color-uno);
+}

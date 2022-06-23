@@ -2,7 +2,10 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
 import Swal from 'sweetalert2'
-import './registro-list.css';
+import './registrarPersona.css';
+import { Link } from 'react-router-dom';
+import img_registro from '../Images/registro.svg'
+
 
 function FormularioPersona() {
 
@@ -30,25 +33,35 @@ function FormularioPersona() {
     /* ------------------------------------- */
     return (
         <body className="body-persona">
-            <div className="caja">
-                <h3>Registro de Personas</h3>
+            <h3>Se parte de nosotros!</h3>
+            <div className="registroPersonas">
+                <div className="img_registro">
+                    <img src={img_registro} alt="Foto del registro de personas" />
+                </div>
+
                 <form onSubmit={registrar}>
-                    <div>
-                        <input type="email" placeholder="Email" required onChange={
-                            e => setEmail(e.target.value)
-                        } />
-                    </div>
-                    <div>
-                        <input type="password" placeholder="Password" required onChange={
-                            e => setPassword(e.target.value)
-                        } />
-                    </div>
-                    
-                    <div className="boton">
-                        <button type="submit"> Registrar </button>
+                    <div className="form-caja">
+                        <h1>Registrate</h1>
+
+                        <div>
+                            <input type="email" placeholder="Email" required onChange={
+                                e => setEmail(e.target.value)
+                            } />
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Password" required onChange={
+                                e => setPassword(e.target.value)
+                            } />
+                        </div>
+
+                        <div className="boton">
+                            <button type="submit"> Registrar </button>
+                        </div>
+                        <Link to="/login" className='registro'><p>Iniciar Sesión </p> </Link>
                     </div>
                 </form>
             </div>
+
         </body>
     )
 }
